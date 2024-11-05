@@ -19,4 +19,4 @@ if __name__ == "__main__":
 
     print(f"Stemmed Words: {stem_normal}")
     print(f"Lemmatized Words (WordNet): {lemmatization_normal}")
-    print(f"Lemmatized Words (spaCy): {spacy_normalize}")
+    print(f"Spacy Words (spaCy): {spacy_normalize}")

@@ -73,8 +73,8 @@ class Process():
             """
             return  [WordNetLemmatizer().lemmatize(word) for word in words]
         
-    def lemmatization_normalize(self, words: list) -> list:
-        """Lemmatizes a list of words.
+    def spacy_normalize(self, words: list) -> list:
+        """spacy a list of words.
 
         Args:
             words (list): A list of words (strings) to be lemmatized.
@@ -85,5 +85,4 @@ class Process():
         # Process the words through spaCy
         doc = spacy.load("en_core_web_sm")(" ".join(words))
         return [token.lemma_ for token in doc]
-
 
