@@ -47,10 +47,13 @@ class YoLo_detect:
         cv2.destroyAllWindows()
 
     def read_cap(self,cap):
-        """_summary_
+        """   Reads frames from the webcam or video capture object, performs inference using the YOLO model,
+        annotates the frames with detected objects, and displays them in a window. The loop continues 
+        until the user presses 'q' to exit or the video stream ends.
 
         Args:
-            cap (_type_): _description_
+            cap (cv2.VideoCapture): The OpenCV capture object used to read frames from a webcam or video file.
+                                This is usually initialized with cv2.VideoCapture() with the camera index or file path.
         """
         if not cap.isOpened():
             print(f"Cannot open capture")
